@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "thousanddegreeknife:blocks/bottom2",
+    "down": "thousanddegreeknife:blocks/brazierfurnacegif",
+    "up": "thousanddegreeknife:blocks/brazierretexture",
+    "east": "thousanddegreeknife:blocks/sides2",
+    "west": "thousanddegreeknife:blocks/sides2",
+    "north": "thousanddegreeknife:blocks/sides2",
+    "south": "thousanddegreeknife:blocks/sides2"
+  }
+}
