@@ -4,8 +4,9 @@ import java.io.File;
 
 import naturix.TDK.Config;
 import naturix.TDK.blocks.BrazierFurnace;
+import naturix.TDK.items.HotKnife;
+import naturix.TDK.items.IronKnife;
 import naturix.TDK.registry.ModBlocks;
-import naturix.TDK.registry.TileEntityCustom;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -18,7 +19,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -57,6 +57,9 @@ public class CommonProxy {
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+    	event.getRegistry().register(new IronKnife());
+    	event.getRegistry().register(new HotKnife());
+    	
     	event.getRegistry().register(new ItemBlock(ModBlocks.brazierfurnace).setRegistryName(ModBlocks.brazierfurnace.getRegistryName()));
     }
 }

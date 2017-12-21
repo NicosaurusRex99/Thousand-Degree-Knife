@@ -1,5 +1,7 @@
 package naturix.TDK.proxy;
 
+import naturix.TDK.registry.ModBlocks;
+import naturix.TDK.registry.ModItems;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -17,7 +19,9 @@ public class ClientProxy extends CommonProxy {
 		}
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-        }
+    ModItems.initModels();
+    ModBlocks.init();
+    }
     
 
 }

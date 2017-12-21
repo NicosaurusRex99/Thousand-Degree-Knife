@@ -3,9 +3,11 @@ package naturix.TDK;
 import naturix.TDK.blocks.BrazierFurnace;
 import naturix.TDK.proxy.CommonProxy;
 import naturix.TDK.registry.ModBlocks;
+import naturix.TDK.registry.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -18,6 +20,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @Mod(modid = ThousandDegreeKnifeMod.MODID, version = ThousandDegreeKnifeMod.VERSION, name = ThousandDegreeKnifeMod.MOD_NAME)
 public class ThousandDegreeKnifeMod
 {
+	public static final Item.ToolMaterial HotToolMaterial = EnumHelper.addToolMaterial("HotKnife", 99, 6142, 321, 844, 50);
     public static final String MODID = "thousanddegreeknife";
     public static final String VERSION = "1.12.2.0";
     public static final String MOD_NAME = "Thousand Degree Knife";
@@ -60,7 +63,7 @@ public class ThousandDegreeKnifeMod
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem()
         {
-            return new ItemStack(ModBlocks.brazierfurnace);
+            return new ItemStack(ModItems.hotknife);
         }
 		
     };
