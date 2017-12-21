@@ -64,7 +64,7 @@ public class TileEntityCustom extends TileEntityLockableLoot {
 	}
 
 	public String getGuiID() {
-		return "minecraft:brazier";
+		return "1";
 	}
 
 	public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn) {

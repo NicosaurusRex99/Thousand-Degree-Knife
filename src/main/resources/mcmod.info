@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "thousanddegreeknife",
+  "name": "Thousand Degree Knife Mod",
+  "description": "What a meme",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["NicosaurusRex99"],
+  "credits": "Thanks Direwolf20 for this idea",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

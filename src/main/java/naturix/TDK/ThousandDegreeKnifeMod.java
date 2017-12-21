@@ -2,7 +2,7 @@ package naturix.TDK;
 
 import naturix.TDK.blocks.BrazierFurnace;
 import naturix.TDK.proxy.CommonProxy;
-import naturix.TDK.registry.ModBlocks;
+import naturix.TDK.proxy.GUIProxy;
 import naturix.TDK.registry.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -46,6 +47,7 @@ public class ThousandDegreeKnifeMod
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
         proxy.init(e);
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIProxy());
     }
 
     @Mod.EventHandler

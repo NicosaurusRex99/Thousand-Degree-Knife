@@ -4,7 +4,9 @@ import java.util.Random;
 
 import naturix.TDK.ThousandDegreeKnifeMod;
 import naturix.TDK.registry.TileEntityCustom;
+import naturix.TDK.util.TDKContainerTileEntity;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -12,10 +14,12 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -25,8 +29,10 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BrazierFurnace extends Block {
+public class BrazierFurnace extends Block implements ITileEntityProvider {
 	
+
+	private static final int GUI_ID = 1;
 
 	int a1 = 0, a2 = 0, a3 = 0, a4 = 0, a5 = 0, a6 = 0;
 
@@ -130,5 +136,18 @@ public class BrazierFurnace extends Block {
 		return 1;
 	}
 
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side,
+                float hitX, float hitY, float hitZ) {
+        // Only execute on the server
+        if (world.isRemote) {
+            return true;
+        }
+        TileEntity te = world.getTileEntity(pos);
+        if (!(te instanceof TDKContainerTileEntity)) {
+            return false;
+        }
+        player.openGui(ThousandDegreeKnifeMod.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
+        return true;
+    }
 }
 
