@@ -1,16 +1,19 @@
 [
 {
   "modid": "thousanddegreeknife",
-  "name": "Thousand Degree Knife Mod",
-  "description": "What a meme",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "name": "ThousandDegreeKnife",
+  "description": "Retextured",
+  "version": "1.12.2.0",
+  "credits": "",
+  "logoFile": "/logo.png",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["NicosaurusRex99"],
-  "credits": "Thanks Direwolf20 for this idea",
-  "logoFile": "",
+  "authorList": [ "NicosaurusRex99" , "" ],
+  "parent": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [
+     ""
+  ]
 }
 ]

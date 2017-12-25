@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YYX"
+  ],
+  "key": {
+    "Y": {
+        "item": "minecraft:iron_ingot"
+    },
+	"X": {
+        "item": "minecraft:brick"
+    }
+  },
+  "result": {
+    "item": "thousanddegreeknife:ironknife"
+  }
+}

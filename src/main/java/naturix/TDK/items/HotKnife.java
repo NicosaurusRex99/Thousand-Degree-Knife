@@ -1,9 +1,11 @@
 package naturix.TDK.items;
 
 import naturix.TDK.ThousandDegreeKnifeMod;
+import naturix.TDK.registry.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -55,5 +57,4 @@ public class HotKnife extends ItemSword {
 
 		return EnumActionResult.PASS;
 	}
-
 }

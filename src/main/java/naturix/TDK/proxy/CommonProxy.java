@@ -3,13 +3,11 @@ package naturix.TDK.proxy;
 import java.io.File;
 
 import naturix.TDK.Config;
-import naturix.TDK.blocks.BrazierFurnace;
+import naturix.TDK.FurnaceRecipes;
 import naturix.TDK.items.HotKnife;
 import naturix.TDK.items.IronKnife;
-import naturix.TDK.registry.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,17 +21,17 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber
 public class CommonProxy {
 	public static Configuration config;
+
 	public void preInit(FMLPreInitializationEvent e) 
 	{
 		File directory = e.getModConfigurationDirectory();
         config = new Configuration(new File(directory.getPath(), "naturix/Thousand Degree Knife.cfg"));
         Config.readConfig();
-        
-    }
+            }
 
     public void init(FMLInitializationEvent e)
     {
-    	ModBlocks.init();
+    	FurnaceRecipes.init();
     }
     
     public void postInit(FMLPostInitializationEvent e) 
@@ -52,14 +50,14 @@ public class CommonProxy {
 		
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-    	event.getRegistry().register(new BrazierFurnace());
 
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
     	event.getRegistry().register(new IronKnife());
-    	event.getRegistry().register(new HotKnife());
-    	
-    	event.getRegistry().register(new ItemBlock(ModBlocks.brazierfurnace).setRegistryName(ModBlocks.brazierfurnace.getRegistryName()));
+    	event.getRegistry().register(new HotKnife());	
     }
+    public void registerItemRenderer(Item item, int meta, String id) {
+
+	}
 }
