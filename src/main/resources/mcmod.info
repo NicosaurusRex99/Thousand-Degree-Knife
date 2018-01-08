@@ -1,19 +1,16 @@
 [
 {
   "modid": "thousanddegreeknife",
-  "name": "ThousandDegreeKnife",
-  "description": "Retextured",
-  "version": "1.12.2.0",
-  "credits": "",
-  "logoFile": "/logo.png",
-  "mcversion": "1.12.2",
+  "name": "Thousand Degree Knife Mod",
+  "description": "tyty mr gear",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": [ "NicosaurusRex99" , "" ],
-  "parent": "",
+  "authorList": ["NicosaurusRex99"],
+  "credits": "MrGear for the vids",
+  "logoFile": "",
   "screenshots": [],
-  "dependencies": [
-     ""
-  ]
+  "dependencies": []
 }
 ]
